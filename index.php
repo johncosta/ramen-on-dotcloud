@@ -3,6 +3,6 @@
     <title>Hello World!</title>
   </head>
   <body>
-    <?php echo "Hello World!\n"; ?>
+    <?php echo "Hello World!\nOn the PHP branch!\n"; ?>
   </body>
 </html>
