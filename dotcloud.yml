@@ -1,2 +1,4 @@
+wwww:
+  type: python
 data:
   type: redis
