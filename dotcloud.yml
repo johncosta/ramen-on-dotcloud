@@ -1,2 +1,4 @@
 www:
-  type: php
+  type: python
+db:
+  type: mongodb
