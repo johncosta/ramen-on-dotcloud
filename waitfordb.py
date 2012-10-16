@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from wsgi import *
 from django.contrib.auth.models import User
-from pymongo.errors import AutoReconnect
+from pymongo.errors import AutoReconnect, ConfigurationError
 import time
 deadline = time.time() + 600 
 while time.time() < deadline:
@@ -12,5 +12,9 @@ while time.time() < deadline:
     except AutoReconnect:
         print 'Could not connect to database. Waiting a little bit.'
         time.sleep(10)
+    except ConfigurationError:
+        print 'Could not connect to database. Waiting a little bit.'
+        time.sleep(10)
+
 print 'Could not connect to database after 10 minutes. Something is wrong.'
 exit(1)
